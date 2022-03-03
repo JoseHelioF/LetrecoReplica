@@ -1,41 +1,47 @@
-:root{
-    --colorborder:#252525;
-    --unitcolor:#fff;
+:root {
+    --colorborder: #252525;
+    --unitcolor: #fff;
+    --green: #51b36e --yellow: #c79c2e --red: #943e3c
 }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: #f4f3f1;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column ;
+    flex-direction: column;
 }
 
-.header{
+.header {
     width: 100%;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding-left: 20rem;
-    padding-right: 20rem;    
+    padding-right: 20rem;
 }
-.buttons{
+
+.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
-button{
+
+button {
     margin: .4rem;
     padding-top: .5rem;
     border-radius: .5rem;
 
 }
+
 h1 {
     text-align: center;
     font-family: 'Acme', sans-serif;
@@ -45,25 +51,30 @@ h1 {
     margin-left: 3rem;
     margin-right: 3rem;
 }
-#letteryellow{
+
+#letteryellow {
     color: #c79c2e;
 }
-#lettergreem{
-    color: #51b36e;;
+
+#lettergreem {
+    color: #51b36e;
+    ;
 }
-#letterred{
+
+#letterred {
     color: #943e3c;
 }
 
 .main {
     width: 500px;
     height: 532px;
-    
+
 }
 
 #inputs {
     width: 500px;
     height: 320px;
+    
 }
 
 .lines {
@@ -78,19 +89,22 @@ h1 {
 .input {
     width: 48px;
     height: 40px;
-    border: #252525 solid 1px;
     border-radius: 5px;
-    margin-left: 8px;
-    margin-right: 8px;
-    background-color:var(--unitcolor);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--unitcolor);
+    border: 1px solid black;
+    padding: auto;
+
 }
 
-#keyboard{
+#keyboard {
     width: 500px;
     height: 188px;
     margin-top: 2rem;
 }
-.keyboardLines{
+
+.keyboardLines {
     width: 500px;
     height: 40px;
     display: flex;
@@ -98,7 +112,8 @@ h1 {
     justify-content: center;
     align-items: center;
 }
-.check{
+
+.check {
     width: 100px;
     height: 40px;
     border: var(--colorborder) solid 1px;
@@ -107,16 +122,40 @@ h1 {
     margin-right: 1rem;
     background-color: var(--unitcolor);
 }
-.check svg{
-     color: rgba(16,16,16, 0.3);
-}
-.key{
+
+
+
+.key {
     width: 38px;
     height: 40px;
-    border:var(--colorborder) solid 1px;
+    border: var(--colorborder) solid 1px;
     border-radius: 5px;
     margin-left: 4px;
     margin-right: 4px;
     background-color: var(--unitcolor);
     text-align: center;
+}
+
+.bord {
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+
+}
+
+input {
+    padding: auto;
+    justify-content: end;
+}
+
+.border-edit {
+    border: 2px solid black;
+}
+
+.check  {
+    color: rgba(16, 16, 16, 0.3);
+}
+.dark{
+    color: #000;
 }
