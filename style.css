@@ -38,8 +38,7 @@ body {
 button {
     margin: .4rem;
     padding-top: .5rem;
-    border-radius: .5rem;
-
+   
 }
 
 h1 {
@@ -65,14 +64,17 @@ h1 {
     color: #943e3c;
 }
 
+
 .main {
     width: 500px;
     height: 532px;
+    font-size: 20px;
+    font-weight: bolder;
 
 }
 
 #inputs {
-    width: 500px;
+    max-width: 500px;
     height: 320px;
     
 }
@@ -83,20 +85,19 @@ h1 {
     display: flex;
     margin-bottom: 1rem;
     justify-content: center;
-
 }
 
 .input {
     width: 48px;
     height: 40px;
     border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 0.5rem; 
     background-color: var(--unitcolor);
     border: 1px solid black;
-    padding: auto;
-
-}
+    text-align: center;
+    text-justify: center;
+    padding: 5px;
+    }
 
 #keyboard {
     width: 500px;
@@ -145,17 +146,32 @@ h1 {
 }
 
 input {
-    padding: auto;
-    justify-content: end;
+      justify-content: center;
 }
 
 .border-edit {
     border: 2px solid black;
 }
 
-.check  {
+
+.dark{
+    color: rgba(16, 16, 16, 1);
+}
+.light{
     color: rgba(16, 16, 16, 0.3);
 }
-.dark{
-    color: #000;
+
+.letteryellow {
+    background-color: #c79c2e;
+    color: white;
 }
+
+.lettergreem {
+    background-color: #51b36e;
+    color: white;
+    }
+
+.letterred {
+ background-color: #943e3c;
+  color: white;
+    }
