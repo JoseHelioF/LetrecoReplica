@@ -14,6 +14,9 @@ function elemento(nomeclasse) {
 function adicionarbordalinha(linha) {
   for (var i = 0; i < linha + 5; i++) {
     letra[i].classList.add("border-edit");
+    if (i - 5 >= 0) {
+      letra[i - 5].classList.remove("border-edit");
+    }
     // console.log(i);
   }
 }
@@ -62,10 +65,8 @@ const alfabeto = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 function checar() {
 
-
   for (var i = 0; i < 5; i++) {
     var l = letra[pos - 5 + i].innerHTML;
-
 
     if (palavra.toUpperCase().indexOf(l) != -1) {
       letra[pos - 5 + i].classList.add("letteryellow");
@@ -77,7 +78,7 @@ function checar() {
       letra[pos - 5 + i].classList.add("lettergreem");
       console.log(l, palavra[i].toUpperCase());
     }
-    
+
   }
 
 
