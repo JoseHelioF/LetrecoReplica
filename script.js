@@ -2,9 +2,25 @@
 
 const palavra = "tunel";
 
+function atrCorTitulo() {
+  let arr = [];
+  var titulo = document.getElementsByTagName('span')
+  while (arr.length < 3) {
+    var n = Math.round(Math.random() * 6)
+    if (arr.indexOf(n) == -1) {
+      arr.push(n)
+    } else {
+      n -= 1;
+    }
+  }
+  titulo[arr[0]].setAttribute('id', 'lettergreem')
+  titulo[arr[1]].setAttribute('id', 'letteryellow')
+  titulo[arr[2]].setAttribute('id', 'letterred')
+}
+
+
 let letra = elemento('input')
 var b = document.getElementsByTagName("svg");
-console.log(letra.length);
 let pos = 0;
 
 function elemento(nomeclasse) {
@@ -25,12 +41,12 @@ function pegaTecla(event) {
   var tecla = event.keyCode;
 
   if (tecla > 65 || tecla < 90) {
-    console.log(tecla);
+    // console.log(tecla);
 
     b[4].classList.add("dark");
     b[4].classList.remove("light");
     var letra = String.fromCharCode(tecla)
-    console.log('Aqui', letra);
+    // console.log('Aqui', letra);
 
     if (alfabeto.indexOf(letra) != -1) {
       return letra;
@@ -44,7 +60,7 @@ function pegaTecla(event) {
 function atribue(event) {
   letra[pos].innerHTML = pegaTecla(event);
   pos++;
-  console.log("pos", pos);
+  // console.log("pos", pos);
   if (pos % 5 == 0) {
     b[5].classList.add("dark");
     b[5].classList.remove("light");
@@ -57,6 +73,7 @@ function atribue(event) {
 }
 
 window.addEventListener("load", adicionarbordalinha(0));
+window.addEventListener("load", atrCorTitulo());
 
 document.addEventListener("keydown", atribue);
 
@@ -76,17 +93,18 @@ function checar() {
 
     if (l == palavra[i].toUpperCase()) {
       letra[pos - 5 + i].classList.add("lettergreem");
-      console.log(l, palavra[i].toUpperCase());
+      // console.log(l, palavra[i].toUpperCase());
     }
 
   }
-
-
-
   adicionarbordalinha(pos)
+  coloreTeclado();
 }
 
+function coloreTeclado(){
+  console.log("coloreTeclado");
+  let teclado = document.getElementsByClassName('key')
+  console.log(teclado.length);
+};
 
 var checagem = elemento('check')[1].addEventListener('click', checar)
-
-console.log(checagem);
